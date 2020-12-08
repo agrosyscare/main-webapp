@@ -47,6 +47,10 @@ Route::post('/settings', 'SettingController@store');
 Route::get('/audits', 'AuditController@index');
 Route::get('/audits/{id}/show', 'AuditController@show');
 
+// Graficos
+Route::get('charts/temperatures', 'ChartController@temperatures');
+Route::get('charts/temperatures/data', 'ChartController@temperaturesJson');
+
 
 // MODIFICAR CUANDO TERMINE APP
 

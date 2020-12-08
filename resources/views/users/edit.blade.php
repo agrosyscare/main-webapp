@@ -82,7 +82,7 @@
 
             <div class="form-group">
                 <label for="role">Contraseña</label>
-                <input type="text" name="password" class="form-control" value="">
+                <input type="password" name="password" type="password" class="form-control" value="">
                 <p>Ingrese un valor solo si desea modificar la contraseña</p>
             </div>
 

@@ -68,7 +68,7 @@
 
             <div class="form-group">
                 <label for="role">Contraseña</label>
-                <input type="text" name="password" class="form-control" value="{{ Str::random(8) }}">
+                <input type="text" name="password" class="form-control" value="{{ Str::random(12) }}">
             </div>
 
             <div class="form-group">

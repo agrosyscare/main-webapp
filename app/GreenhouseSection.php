@@ -11,17 +11,27 @@ class GreenhouseSection extends Model implements Auditable
     use SoftDeletes;
     use \OwenIt\Auditing\Auditable;
 
-        //Nombre de la tabla en MySQL.
-        protected $table='greenhouse_sections';
+    //Nombre de la tabla en MySQL.
+    protected $table = 'greenhouse_sections';
 
-        //Atributos que se pueden asignar de manera masiva.
-        protected $fillable= ['name_section','planting_type','greenhouse_id'];
+    //Atributos que se pueden asignar de manera masiva.
+    protected $fillable = ['name_section', 'planting_type', 'greenhouse_id'];
 
-        //Campos que no queremos que se devuelvan en las consultas
-        protected $hidden = ['created_at','updated_at','deleted_at'];
+    //Campos que no queremos que se devuelvan en las consultas
+    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
-        public function greenhouses() {
-            $this->belongsTo('App\Greenhouses');
-        }
+    public function greenhouses()
+    {
+        return $this->belongsTo(Greenhouse::class);
+    }
 
+    public function sensors()
+    {
+        return $this->hasMany(Sensor::class);
+    }
+
+    public function lectureReadings()
+    {
+        return $this->hasManyThrough(TemperatureReading::class, Sensor::class);
+    }
 }

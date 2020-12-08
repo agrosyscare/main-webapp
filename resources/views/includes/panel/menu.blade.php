@@ -79,17 +79,17 @@
 <!-- Navigation -->
 <ul class="navbar-nav mb-md-3">
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('charts/temperatures') }}">
             <i class="ni ni-spaceship"></i> Reportes de temperatura
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('charts/env-humidity') }}">
             <i class="ni ni-palette"></i> Reportes de humedad ambiental
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('charts/ret-humidity') }}">
             <i class="ni ni-ui-04"></i> Reportes de humedad radicular
         </a>
     </li>

@@ -28,12 +28,12 @@ class TemperatureReadingController extends Controller
             ->first();
 
 
-        return response()->json($query, 200);
+        return response()->json($query);
     }
 
     public function store(Request $request, ConditionServiceInterface $conditionService)
     {
-        $rules =[
+        $rules = [
             'reading' => 'required',
             'sensor_id' => 'exists:sensors,id'
         ];
