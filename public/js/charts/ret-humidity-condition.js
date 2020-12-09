@@ -3,7 +3,7 @@ const chart = Highcharts.chart('container', {
         type: 'line'
     },
     title: {
-        text: 'Lectura promedio diaria por semana de temperaturas'
+        text: 'Lectura promedio diaria por semana de Humedad Radicular'
     },
     subtitle: {
         text: 'Establecido por canchas'
@@ -13,7 +13,7 @@ const chart = Highcharts.chart('container', {
     },
     yAxis: {
         title: {
-            text: 'Temperatura (°C)'
+            text: 'Humedad radicular (%)'
         }
     },
     plotOptions: {
@@ -28,7 +28,7 @@ const chart = Highcharts.chart('container', {
 });
 
 function fetchData() {
-    fetch('/charts/temperatures/data')
+    fetch('/charts/ret-humidity/data')
         .then(function(response) {
             return response.json();
         })

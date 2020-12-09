@@ -47,10 +47,17 @@ Route::post('/settings', 'SettingController@store');
 Route::get('/audits', 'AuditController@index');
 Route::get('/audits/{id}/show', 'AuditController@show');
 
-// Graficos
+// Graficos de temperatura
 Route::get('charts/temperatures', 'ChartController@temperatures');
 Route::get('charts/temperatures/data', 'ChartController@temperaturesJson');
 
+// Graficos de humedad ambiental
+Route::get('charts/env-humidity', 'ChartController@environmentalHumidities');
+Route::get('charts/env-humidity/data', 'ChartController@environmentalHumiditiesJson');
+
+// Graficos de humedad radicular
+Route::get('charts/ret-humidity', 'ChartController@reticularHumidities');
+Route::get('charts/ret-humidity/data', 'ChartController@reticularHumiditiesJson');
 
 // MODIFICAR CUANDO TERMINE APP
 

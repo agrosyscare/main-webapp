@@ -37,11 +37,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($temperatures as $temperature)
+                        @foreach($envHumidities as $envHumidity)
                             <tr>
-                                <th scope="row">{{ $temperature->created_at }}</th>
-                                <td>{{ $temperature->reading }}</td>
-                                <td>{{ $temperature->status }}</td>
+                                <th scope="row">{{ $envHumidity->created_at }}</th>
+                                <td>{{ $envHumidity->reading }}</td>
+                                <td>{{ $envHumidity->status }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -107,5 +107,5 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="{{ asset("js/charts/temperature-condition.js") }}"></script>
+    <script src="{{ asset("js/charts/env-humidity-condition.js") }}"></script>
 @endsection
