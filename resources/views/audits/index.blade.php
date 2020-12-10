@@ -45,10 +45,10 @@
                         <td>
                             <form action="{{ url('audits/'.$audit->id) }}" method="post">
                                 @csrf
-{{--                                <a href="{{ url('audits/'.$audit->id.'/show') }}"--}}
-{{--                                   class="btn btn-sm btn-primary">Mostrar detalles</a>--}}
-                                <a href="#"
-                                class="btn btn-sm btn-primary">Mostrar detalles</a>
+                                <a href="{{ url('audits/'.$audit->id.'/show') }}"
+                                   class="btn btn-sm btn-primary">Mostrar detalles</a>
+{{--                                <a href="#"--}}
+{{--                                class="btn btn-sm btn-primary">Mostrar detalles</a>--}}
                             </form>
                         </td>
                     </tr>

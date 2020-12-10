@@ -12,6 +12,8 @@ class AuditController extends Controller
         $audits = Audit::select('audits.id', 'users.rut', 'audits.auditable_type', 'audits.event')
             ->join('users', 'users.id', '=', 'audits.user_id')->get();
 
+//        dd($audits);
+
         return view('audits.index', compact('audits'));
     }
 
@@ -20,8 +22,10 @@ class AuditController extends Controller
 
         $audit = Audit::find($id);
 
-        var_dump($audit->getMetadata());
+        $attributeValue = key($audit->new_values);
+        $oldValue = implode("','", $audit->old_values);
+        $newValue = implode("','", $audit->new_values);
 
-        return view('audits.show', compact('audit'));
+        return view('audits.show', compact('audit', 'attributeValue', 'oldValue', 'newValue'));
     }
 }
